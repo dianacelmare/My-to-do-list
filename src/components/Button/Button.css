@@ -1,0 +1,12 @@
+#input-btn{
+    padding: 12px 24px;
+    color: white;
+    background-color: #834bf6;
+    border: none;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+}
+
+

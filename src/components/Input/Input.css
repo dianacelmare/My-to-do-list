@@ -1,0 +1,28 @@
+.task-container{
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+input{
+    width: 50%;
+    height: 100%;
+    color: lightgrey;
+    background-color: transparent;
+    border-left: 2px solid grey;
+    border-top: 2px solid rgb(25, 25, 100);
+    border-bottom: 2px solid rgb(25, 25, 100);
+    border-right: none;
+    padding: 0px 8px;
+
+    box-sizing: border-box;
+    
+}
+
+input:focus-visible{
+    outline: none;
+    border: 2px solid grey;;
+}

@@ -1,12 +1,14 @@
 import "./Task.css";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Task = () => {
+const Task = (props) => {
   return (
-    <div>
-      Primul Task
+    <div className="task-container">
+      {props.taskName}
       <div className="icons">
-        {/* <FontAwesomeIcon icon="fa-solid fa-trash" style={{color: "#1b4ea7",}} /> */}
+        <FontAwesomeIcon icon={icon({ name: "trash" })} />
+        <FontAwesomeIcon icon={icon({ name: "pen-to-square" })} />
       </div>
     </div>
   );

@@ -3,16 +3,22 @@ import "./Input.css";
 import { useState } from "react";
 
 const Input = (props) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(""); //state-il
 
   const handleInputValue = (event) => {
-    setInputValue(event.target.value)
-    console.log(event.target.value); //asa accesez valoarea introdusa de user
+    setInputValue(event.target.value); //asa accesez valoarea introdusa de user
+    console.log(event.target.value);
   };
 
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+    const newTask = inputValue;
+    props.taskName(inputValue)
+    console.log(newTask);
+  };
   return (
     <>
-      <div className="task-container">
+      <form className="input-container" onSubmit={handleSubmitForm}>
         <input
           type="text"
           placeholder="What is your task for today?"
@@ -20,7 +26,7 @@ const Input = (props) => {
           value={inputValue}
         />
         <Button btnText={props.btnText} />
-      </div>
+      </form>
     </>
   );
 };

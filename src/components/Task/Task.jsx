@@ -7,8 +7,11 @@ const Task = (props) => {
     <div className="task-container">
       {props.taskName}
       <div className="icons">
-        <FontAwesomeIcon icon={icon({ name: "trash" })} />
         <FontAwesomeIcon icon={icon({ name: "pen-to-square" })} />
+        <FontAwesomeIcon
+          icon={icon({ name: "trash" })}
+          onClick={() => props.deleteTask(props.id)}
+        />
       </div>
     </div>
   );

@@ -12,9 +12,12 @@ const Input = (props) => {
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
-    const newTask = inputValue;
-    props.taskName(inputValue)
-    console.log(newTask);
+    props.addTodo(inputValue); // trimit inputValue catre parinte prin props
+    setInputValue("");
+
+    // const newTask = inputValue;
+    // props.taskName(inputValue)
+    // console.log(newTask);
   };
   return (
     <>
